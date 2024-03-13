@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en"
+    xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+<meta charset="ISO-8859-1">
+<title>Deposit Page</title>
+
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet">   
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    
+    
+ <style>
+    .sea{
+    height:35px;
+    }
+    .search{
+    width: 274px;
+    height: 34px;
+    margin-top: 10px;
+       
+    }
+    .search-container{
+      display: inline-block;
+    }
+    
+    .depositpage{
+   text-align: center;
+    }
+    
+</style>
+</head>
+
+
+
+<body>
+<div>
+  <h1>Deposit page</h1>
+  </div>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   Transaction
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+   <a class="dropdown-item" th:href="@{/emphome}">Home</a>
+    <a class="dropdown-item" th:href="@{/deposit}">Deposit</a>
+    <a class="dropdown-item" th:href="@{/withdrawal}">Withdrawal</a>
+    <a class="dropdown-item" th:href="@{/transaction}">Transfer</a>
+   
+  </div>
+  
+  
+   <div class="search-container">
+    
+      <input type="text" placeholder="Enter the Account Number"  id="acc_no" class="search">
+      <button type="submit" class="sea"    id="search"><i class="fa fa-search"></i></button>
+    
+  </div>
+</div>
+
+  <div>
+   <span  id="error-accno" 
+       style="color: red;padding-left: 131px; font-size: 20px;">
+  </span>
+</div>
+       
+  <div class=depositpage>
+  <h1>Deposit </h1>
+  <span id="Id"></span>
+    <label>Your Account Number:</label><span id="accountno"></span><br>
+        
+    <label>Your Name:</label>
+        <span id="name"></span><br>
+     <label>Your Current balance:</label>
+        <span id="balance"></span><br>
+        
+        
+     <label>Enter the Amount</label><br>
+        <input type="text" id="amount"><br>
+        <label>Enter the Re-Amount</label><br>
+         <input type="text" id="re-amount"><br><br>
+         <span id="error-amount" style="color:red"></span>
+         
+         <button class="btn btn-primary"  id="deposit">Deposit</button>
+  
+  </div>
+
+       
+       
+       
+       
+       
+        
+       <script src="deposit.js"></script> 
+       
+</body>
+</html>
